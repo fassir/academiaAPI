@@ -54,22 +54,27 @@ make run
 ```
 e acesse: http://127.0.0.1:8000/docs
 
-# Desafio Final
-    - adicionar query parameters nos endpoints
-        - atleta
-            - nome
-            - cpf
-    - customizar response de retorno de endpoints
-        - get all
-            - atleta
-                - nome
-                - centro_treinamento
-                - categoria
-    - Manipular exceção de integridade dos dados em cada módulo/tabela
-        - sqlalchemy.exc.IntegrityError e devolver a seguinte mensagem: “Já existe um atleta cadastrado com o cpf: x”
-        - status_code: 303
-    - Adicionar paginação utilizando a lib: fastapi-pagination
-        - limit e offset
+# Adicionando novas funcionalidades
+Foram adicionadas novas funcionalidades à API:
+## adicionar query parameters nos endpoints
+Para a classe Atleta, foram adicionadas as seguintes query parameters:
+- atleta
+    - nome
+    - cpf
+## customizar response de retorno de endpoints
+Para a classe Atleta, foram customizadas as seguintes respostas:
+- get all
+    - atleta
+    - nome
+    - centro_treinamento
+    - categoria
+## Manipular exceção de integridade dos dados em cada módulo/tabela
+Para a classe Atleta, foi adicionado o tratamento de exceção de integridade dos dados:
+- sqlalchemy.exc.IntegrityError e devolver a seguinte mensagem: “Já existe um atleta cadastrado com o cpf: x”
+- status_code: 303
+## Adicionar paginação utilizando a lib: fastapi-pagination
+Para a classe Atleta, foi adicionado a paginação utilizando a lib fastapi-pagination:
+- limit e offset
 # Referências
 
 FastAPI: https://fastapi.tiangolo.com/
